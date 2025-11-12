@@ -20,6 +20,7 @@ import Particles from './components/Particles'
 import ScrollIndicator from './components/ScrollIndicator'
 import About from './components/About'
 import Product from './components/Product'
+import Highlight from './components/Highlight'
 
 const VyomGarudLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -312,24 +313,7 @@ const VyomGarudLanding = () => {
             className='space-y-8'
           >
             {highlights.map((highlight, i) => (
-              <motion.div
-                key={i}
-                variants={fadeInUp}
-                transition={{ duration: 0.6 }}
-                whileHover={{ x: 16, scale: 1.02 }}
-                className='group flex items-start space-x-6 p-8 bg-zinc-800/30 border border-zinc-800 hover:border-orange-500/50 rounded-2xl transition-all duration-500'
-              >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className='flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center font-bold text-xl'
-                >
-                  {i + 1}
-                </motion.div>
-                <p className='text-xl text-zinc-300 leading-relaxed pt-2'>
-                  {highlight}
-                </p>
-              </motion.div>
+              <Highlight highlight={highlight} i={i} key={i} />
             ))}
           </motion.div>
         </div>
