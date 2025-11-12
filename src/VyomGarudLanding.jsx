@@ -1,19 +1,10 @@
-import { useState, useEffect } from 'react'
-import { motion, useScroll, useTransform, useInView } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 import {
-  Menu,
-  X,
   ChevronRight,
   Shield,
   Cpu,
   Radio,
   Zap,
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter
 } from 'lucide-react'
 import BackgroundGrid from './components/BackgroundGrid'
 import Particles from './components/Particles'
@@ -57,20 +48,9 @@ const VyomGarudLanding = () => {
     'Encrypted communications ensuring complete operational security'
   ]
 
-  // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0 }
-  }
-
-  const fadeInLeft = {
-    hidden: { opacity: 0, x: -60 },
-    visible: { opacity: 1, x: 0 }
-  }
-
-  const fadeInRight = {
-    hidden: { opacity: 0, x: 60 },
-    visible: { opacity: 1, x: 0 }
   }
 
   const staggerContainer = {
@@ -83,28 +63,18 @@ const VyomGarudLanding = () => {
     }
   }
 
-  const scaleIn = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 }
-  }
-
   return (
     <div className="bg-zinc-950 text-white font-['Inter',sans-serif] overflow-x-hidden overflow-y-hidden">
-      {/* Progress Bar */}
       <motion.div
         className='fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 origin-left z-50'
         style={{ scaleX: scrollYProgress }}
       />
 
-      {/* Navigation */}
       <Navbar/>
 
-      {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-        {/* Animated Background Grid */}
         <BackgroundGrid />
 
-        {/* Floating Particles */}
         <Particles />
 
         <div className='relative z-10 max-w-6xl mx-auto px-6 text-center'>
@@ -163,15 +133,12 @@ const VyomGarudLanding = () => {
             </motion.a>
           </motion.div>
 
-          {/* Scroll Indicator */}
           <ScrollIndicator />
         </div>
       </section>
 
-      {/* About Section */}
       <About />
 
-      {/* Capabilities Section */}
       <section
         id='capabilities'
         className='py-32 bg-zinc-900 relative overflow-hidden'
@@ -216,7 +183,6 @@ const VyomGarudLanding = () => {
         </div>
       </section>
 
-      {/* Highlights Section */}
       <section className='py-32 bg-gradient-to-b from-zinc-900 to-zinc-950'>
         <div className='max-w-6xl mx-auto px-6'>
           <motion.div
@@ -244,10 +210,8 @@ const VyomGarudLanding = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <Contact/>
 
-      {/* Footer */}
       <Footer/>
     </div>
   )
