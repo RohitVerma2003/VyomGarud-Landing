@@ -6,6 +6,12 @@ A **cutting-edge military-grade landing page** for **VyomGarud UAV Systems**
 🔗 [Live Demo](https://vyomgarud0.netlify.app/)
 
 ---
+
+## Notes
+
+<img width="500" alt="diagram-export-11-12-2025-4_50_11-PM" src="https://github.com/user-attachments/assets/f9b133b5-1732-4f47-bec4-0ff58642427f" />
+
+---
 ## Images
 <p align="center" width="100%">
   <img width="49%" alt="Screenshot1" src="https://github.com/user-attachments/assets/2a0552d3-bba9-4dea-9055-7dd1a66a2f28" />
